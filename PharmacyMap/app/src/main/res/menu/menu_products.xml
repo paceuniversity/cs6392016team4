@@ -1,17 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomePageActivity">
+    tools:context="edu.pace.cs6392016.team4.pharmacymap.ProductsActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never" >
-    </item>
-    <item
-        android:id="@+id/menu_products"
-        android:title="Products"/>
-    <item
-        android:id="@+id/menu_map"
-        android:title="Map"/>
+        app:showAsAction="never" />
 </menu>
