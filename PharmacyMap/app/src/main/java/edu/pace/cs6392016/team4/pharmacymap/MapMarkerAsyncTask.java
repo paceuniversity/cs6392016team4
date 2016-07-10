@@ -9,7 +9,8 @@ public class MapMarkerAsyncTask extends AsyncTask<String,Void,CSVRecord>{
     protected CSVRecord doInBackground(String... strings) {
         String zipCode = strings[0];
         PharmacyDataRead prd = new PharmacyDataRead();
-        return prd.getPharmaciesByZipcode(zipCode);
+        CSVRecord out = prd.getPharmaciesByZipcode(zipCode);
+        return out;
     }
 
 
