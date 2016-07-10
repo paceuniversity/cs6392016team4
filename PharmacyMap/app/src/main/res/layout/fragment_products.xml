@@ -7,7 +7,42 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.pace.cs6392016.team4.pharmacymap.ProductsActivityFragment"
-    tools:showIn="@layout/activity_products">
+    tools:showIn="@layout/activity_products"
+    android:scrollIndicators="right">
 
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/benadryl"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/claritin"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:src="@drawable/benadrylsyrup"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:src="@drawable/zyrtec"/>
 
 </RelativeLayout>
