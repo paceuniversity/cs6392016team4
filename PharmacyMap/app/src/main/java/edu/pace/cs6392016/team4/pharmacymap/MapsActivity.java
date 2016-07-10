@@ -31,7 +31,7 @@ import com.google.android.gms.location.LocationListener;
 
 
 
-public class MapsActivity extends FragmentActivity implements OnMyLocationChangeListener, View.OnClickListener {
+public class MapsActivity extends FragmentActivity   {
     GoogleMap googleMap;
     Marker googleMarker;
     private Button btnClick;
@@ -61,7 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMyLocationChange
                 return;
             }
             googleMap.setMyLocationEnabled(true);
-            googleMap.setOnMyLocationChangeListener(this);
+            //googleMap.setOnMyLocationChangeListener(this);
         }
     }
 
@@ -86,28 +86,28 @@ public class MapsActivity extends FragmentActivity implements OnMyLocationChange
 //    }
 
 
-    @Override
-    public void onMyLocationChange(Location location) {
-        btnClick =(Button)findViewById(R.id.button);
-//        Button btnMyLocation = (Button)findViewById(R.id.btnMyLocation);
-        btnClick.setOnClickListener(this);
-        double latitude=location.getLatitude();
-        double longitude=location.getLongitude();
-        LatLng LatLng=new LatLng(latitude, longitude);
-        googleMarker = googleMap.addMarker(new MarkerOptions().position(LatLng));
-        if(googleMap != null){
-            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng,15));
+//    @Override
+//    public void onMyLocationChange(Location location) {
+//        btnClick =(Button)findViewById(R.id.button);
+////        Button btnMyLocation = (Button)findViewById(R.id.btnMyLocation);
+//        btnClick.setOnClickListener();
+//        double latitude=location.getLatitude();
+//        double longitude=location.getLongitude();
+//        LatLng LatLng=new LatLng(latitude, longitude);
+//        googleMarker = googleMap.addMarker(new MarkerOptions().position(LatLng));
+//        if(googleMap != null){
+//            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng,15));
+//
+//        }
+//
+//    }
 
-        }
 
-    }
-
-
-    @Override
-    public void onClick(View view) {
-        String uri = String.format("geo:41.316700, -74.125651");
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri.parse(uri));
-        Context.startActivity(intent);
-
-    }
+//    @Override
+//    public void onClick(View view) {
+//        String uri = String.format("geo:41.316700, -74.125651");
+//        Intent intent = new Intent(Intent.ACTION_VIEW, uri.parse(uri));
+//        startActivity(intent);
+//
+//    }
 }
