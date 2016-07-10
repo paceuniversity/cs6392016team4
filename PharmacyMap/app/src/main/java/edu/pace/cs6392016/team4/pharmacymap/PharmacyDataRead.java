@@ -32,16 +32,16 @@ public class PharmacyDataRead {
     }
 
     // Return pharmacies csvrecord in same zipcode as user
-    public CSVRecord[] getPharmaciesByZipcode(String userZipCode) {
-        ArrayList<CSVRecord> matchingZips = new ArrayList<CSVRecord>();
+    public CSVRecord getPharmaciesByZipcode(String userZipCode) {
+        //ArrayList<CSVRecord> matchingZips = new ArrayList<CSVRecord>();
         for (CSVRecord r : records) {
             String zip = r.get("FacilityZipcode");
             if (zip.equals(userZipCode)) {
-                matchingZips.add(r);
+//                matchingZips.add(r);
+                return r;
             }
         }
-        CSVRecord[] out = new CSVRecord[matchingZips.size()];
-        return matchingZips.toArray(out);
+        return null;
     }
 
 
