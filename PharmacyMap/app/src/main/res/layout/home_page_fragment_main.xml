@@ -13,6 +13,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/searchMap"
+        android:inputType="number"
+        android:ems="10"
         android:layout_above="@+id/button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
